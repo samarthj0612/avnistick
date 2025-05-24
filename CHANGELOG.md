@@ -1,3 +1,13 @@
+25-05-2025
+
+Add login and signup pages with return to store functionality
+
+- Created login.html with a login form and navigation bar.
+- Created signup.html with a signup form and navigation bar.
+- Added return to store icon in both pages.
+- Included necessary CSS files for styling.
+
+
 24-05-2025
 
 Add initial website structure and assets for AvniStick
