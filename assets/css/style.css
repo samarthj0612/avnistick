@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: 'Trajan Pro';
+  src: url(../fonts/TrajanPro-Regular.woff);
+}
+
+@font-face {
+  font-family: 'Billy Ohio';
+  src: url(../fonts/Billy\ Ohio.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #01A3AB;
+  --white-600: rgb(255, 255, 255, 0.6);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+#main-loader {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b1d2d3;
+  z-index: 9999999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  visibility: hidden;
+}
+
+#wrapper {
+  /* padding-top: 80px; */
+}
+
+#wrapper #hero-header {
+  height: 60vh;
+  background-image: url(../images/hero-header-bg.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px 0px 30px 30px;
+  display: flex;
+  align-items: center;
+  padding: 10%;
+}
+
+#wrapper #hero-header h1 {
+  text-transform: uppercase;
+  font-family: Trajan Pro;
+  font-weight: lighter;
+  color: white;
+  font-size: 3.6rem;
+  line-height: 40px;
+}
+
+#navbar {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+#navbar .navleft input {
+  padding: 12px;
+  background-color: var(--white-600);
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  margin-right: 60px;
+}
+
+#navbar .navlinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--white-600);
+  padding: 10px 20px;
+  border-radius: 50px;
+  height: 50px;
+}
+
+#navbar .navlinks a {
+  color: black;
+}
+
+#navbar .navlinks .centered-logo {
+  border: 1px solid black;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-image: url(../images/logo.png);
+  background-size: cover;
+  background-color: white;
+}
+
+#navbar .navright {
+  display: flex;
+  gap: 10px;
+}
+
+#navbar .navright a {
+  background-color: var(--white-600);
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: black;
+}
+
+#navbar .navright a:nth-child(2) {
+  background-color: var(--primary);
+  color: white;
+}
+
+#hero {
+  padding-top: 5%;
+  min-height: 100vh;
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 0px 0px 30px 30px;
+}
+
+#hero h2,
+#hero h3 {
+  text-transform: uppercase;
+  font-family: Trajan Pro;
+  font-weight: lighter;
+  color: white;
+}
+
+#hero h2 {
+  font-size: 3.6rem;
+  line-height: 40px;
+}
+
+#hero h3 {
+  font-size: 2rem;
+}
+
+#hero button {
+  margin-top: 50px;
+  background-color: var(--white-600);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+}
+
+#carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  gap: 30px;
+}
+
+#carousel>img {
+  height: 50px;
+  width: 50px;
+}
+
+#carousel .carousel-item {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#carousel .carousel-item img {
+  height: 300px;
+  width: 300px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+#carousel .carousel-item:nth-child(2) img,
+#carousel .carousel-item:nth-last-child(2) img {
+  height: 100px;
+  width: 100px;
+  opacity: 0.2;
+}
+
+#carousel .carousel-item:nth-child(3) img,
+#carousel .carousel-item:nth-last-child(3) img {
+  height: 200px;
+  width: 200px;
+  opacity: 0.6;
+}
+
+#artist-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  gap: 30px;
+}
+
+#artist-summary .header {
+  text-align: center;
+}
+
+#artist-summary .header h2 {
+  font-family: 'Billy Ohio';
+  font-size: 70px;
+  font-weight: 400;
+  color: black;
+  line-height: 60px;
+}
+
+#artist-summary .header img {
+  width: 250px;
+  margin-top: -20px;
+  margin-right: -50px;
+}
+
+#artist-summary .carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#artist-summary .carousel {
+  height: 45vh;
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--white-600);
+  border-radius: 40px;
+  background-image: url(../images/sample1.png);
+  background-size: cover;
+}
+
+#artist-summary .carousel:nth-child(1) {
+  margin-right: -60px;
+  opacity: 0.8;
+}
+
+#artist-summary .carousel:nth-child(2) {
+  height: 50vh;
+  width: 280px;
+  z-index: 9;
+}
+
+#artist-summary .carousel:nth-child(3) {
+  margin-left: -60px;
+  opacity: 0.8;
+}
+
+#artist-summary p {
+  width: 55%;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Poppins;
+}
+
+#artist-summary button {
+  background-color: #00B9C0;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+}
+
+#trending-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 180px;
+}
+
+#trending-products .header {
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+#trending-products button {
+  background-color: #00B9C0;
+  color: white;
+  padding: 12px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid black;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.products-container .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  width: 260px;
+  border-radius: 40px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.products-container .product .top {
+  position: relative;
+}
+
+.products-container .product .top>img {
+  border-radius: 30px;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.products-container .product .top .cart-action-btn {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  /* background-color: #01A4AB;
+  padding: 5px; */
+  height: 50px;
+  width: 50px;
+  /* border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.products-container .product .top .cart-action-btn img {
+  height: 100%;
+}
+
+.products-container .product>span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-container .product>span h5,
+.products-container .product>span h6 {
+  font-weight: 600;
+}
+
+.products-container .product>p {
+  font-size: 0.8rem;
+}
+
+#best-sellers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 180px;
+}
+
+#best-sellers button {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.best-sellers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.best-sellers-container .best-seller {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 240px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  background-color: #B3E5E6;
+}
+
+.best-sellers-container .best-seller .top {
+  position: relative;
+}
+
+.best-sellers-container .best-seller .top>img {
+  border-radius: 30px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.best-sellers-container .best-seller .top .cart-action-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.best-sellers-container .best-seller .top .cart-action-btn img {
+  background-color: red;
+}
+
+.best-sellers-container .best-seller>span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.best-sellers-container .best-seller>p {
+  font-size: 0.8rem;
+}
+
+#explore-our-products {
+  padding: 40px;
+}
+
+#explore-our-products>h2 {
+  display: inline-block;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+#explore-our-products>h2 span {
+  font-family: Billy Ohio;
+  font-size: 4rem;
+  font-weight: 400;
+  color: black;
+}
+
+#explore-our-products .content {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#explore-our-products .content .left {
+  text-align: center;
+}
+
+
+#explore-our-products .content .left .circle-img {
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+  position: relative;
+  background-image: url(../../assets/images/sample1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#explore-our-products .content .left .circle-img .info-tip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#explore-our-products .content .right {
+  width: 50%;
+}
+
+#explore-our-products .content .right h1 span {
+  font-family: Billy Ohio;
+  font-weight: 400;
+  color: black;
+}
+
+#explore-our-products .content .right .card {
+  background-color: #D9D9D9;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+#explore-our-products .content .right .card>img {
+  height: 200px;
+  width: 160px;
+  border-radius: 20px;
+}
+
+.card-content button {
+  background-color: #00B9C0;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
