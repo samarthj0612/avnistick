@@ -1,3 +1,8 @@
+27-05-2025
+
+Add shop page with layout, styles, and product display functionality
+
+
 26-05-2025
 
 Add collections page with layout and styles for products
