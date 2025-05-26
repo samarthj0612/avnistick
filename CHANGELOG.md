@@ -1,3 +1,8 @@
+26-05-2025
+
+Add collections page with layout and styles for products
+
+
 25-05-2025
 
 Add login and signup pages with return to store functionality

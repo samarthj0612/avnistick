@@ -1,0 +1,39 @@
+#all-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 180px;
+}
+
+#all-products .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#all-products .header h3 {
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+#all-products button {
+  background-color: #00B9C0;
+  color: white;
+  padding: 12px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  align-self: flex-start;
+}
+
+#all-products .view-all {
+  align-self: center;
+}
